@@ -112,11 +112,11 @@
   }
 
   var sayHello = function(name) {
-    return "Hello " + name " !";
+    return "Hello " + name + "!";
   }
 
   var sayGoodbye = function(name) {
-    return "Goodbye " + name " !";
+    return "Goodbye " + name + "!";
   }
 
   console.log(helloGoodbye("Sarah"));
