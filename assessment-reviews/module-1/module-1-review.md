@@ -107,7 +107,7 @@ h1 {
   ```html
   <a href="#" class="btn">Learn more</a>
   ```
-btn.a {
+a.btn {
   background-color: #0000FF
   }
 
@@ -120,7 +120,7 @@ btn.a {
 
   <p>Welcome to this awesome website!</p>
   ```
-jumbotron.p{
+header.jumbotron p {
   font-size: 20px 
 }
 
@@ -229,25 +229,28 @@ findLongestWord(["Cat", "Banana", "Elephant", "Dog"]);
 
 9. Define a function `sum()` that sums all the numbers in an array of numbers. For example, `sum([1,2,3,4])` should return 10.
 
-function sum(a,b,c) {
-  var a = 4;
-  var b = 3;
-  var c = 3;
-  var sumTotal = a + b + c;
-  return sumTotal;
-};
+var numbers = [5,2,9,32];
+var totalAmount = 0;
+for (var i = 0; i < numbers.length; i++) {
+    totalAmount += numbers[i];
+}  
 
-console.log(sum());
+console.log(totalAmount);
 
 10. Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 
-function() {
-  var letter = undefined;
-  if(letter == "a","e","i","o","u") {
-    return true;
-  } else {
+var vowelArray = ["a","e","i","o","u"];
+
+var vowelFinder = function(letter) {
+  for (var i = 0; i < vowelArray.length; i++) {
+    if (letter == vowelArray[i]) {
+      return true;
+    }   
+  }
   return false;
 }
+  
+console.log(vowelFinder("z"));
 
 11. Write the correct line to make `"Woof!"` show up in the console based on this script:
 
@@ -260,7 +263,8 @@ function() {
     }
   };
   ```
-pet.speak;
+pet.speak();
+
 12. Using the same script as above, write the correct line to log the dog's name to the console.
 
 var pet = {
@@ -270,6 +274,8 @@ var pet = {
       console.log("Woof!");
     }
   };
+  
+console.log(pet.name);  
   
 ## Command Line
 
@@ -287,7 +293,7 @@ This changes the directory to "my-cool-project".
 ### Exercises
 
 1. Write the command to make a new directory called "my-cool-project".
->git mkdir "my-cool-project"
+>mkdir my-cool-project
 2. Write the command to create a file called "index.html".
 > git touch "index.html"
 3. Write the command to delete a file called "main.css".
@@ -307,6 +313,6 @@ A local repository has data that is only accesible from a single location while 
 1. Write the command that you would use to create a new local Git repository.
 > git init
 2. Write the command to stage a file called `index.html` to be committed.
-> git add "index.html"
+> git add index.html
 3. Write the command to view the current status of the git repository.
 > git status
